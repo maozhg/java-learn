@@ -324,7 +324,8 @@ public int getNum(){
 	int i = -1;
 	try{
 		String stri="";
-		BufferedReader in = new BufferedReader(new FileReader(f)); 		  			while((stri=in.readLine())!=null){ 
+		BufferedReader in = new BufferedReader(new FileReader(f)); 	
+        Swhile((stri=in.readLine())!=null){ 
             i = Integer.parseInt(stri.trim());
 		}
 		in.close();
@@ -339,7 +340,7 @@ public void setNum(){
     i++;
     try{
 
-        PrintWriter out=new PrintWriter(new BufferedWriter(new 	  			           FileWriter(f,false))); 
+        PrintWriter out=new PrintWriter(new BufferedWriter(new FileWriter(f,false))); 
         out.write(String.valueOf(i)); //可能是编码的原因，如果直接写入 int 的话，将出现 java编码和 windows 编码的混乱，因此此处写入的是 String out.close() ;
     }catch(Exception e){
    		 e.printStackTrace();
